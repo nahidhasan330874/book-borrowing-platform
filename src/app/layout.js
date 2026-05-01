@@ -1,7 +1,7 @@
  import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
- 
+import Footer from "@/components/Footer";
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar/>
         <main className="container mx-auto">{children}</main>
+        <Footer/>
         </body>
     </html>
   );
