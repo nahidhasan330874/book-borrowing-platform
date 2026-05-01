@@ -1,0 +1,110 @@
+ [
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "description": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a different life the protagonist could have lived.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://m.media-amazon.com/images/I/81J6APjwxlL.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship that teaches how to write readable, reusable, and maintainable code.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://m.media-amazon.com/images/I/41xShlnTZTL.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An accessible overview of cosmology, black holes, and the nature of time and space.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1333578746i/3869.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A fable about following your dreams and listening to your heart.",
+    "category": "Story",
+    "available_quantity": 15,
+    "image_url": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas",
+    "description": "Practical advice for software developers on how to become better at their craft.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://m.media-amazon.com/images/I/41as+WafrFL.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "description": "A groundbreaking narrative of humanity's creation and evolution.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Gene: An Intimate History",
+    "author": "Siddhartha Mukherjee",
+    "description": "A magnificent history of the gene and the quest to decipher the master-code of instructions that makes and defines us.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1452452965i/27276428.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "description": "The big ideas behind reliable, scalable, and maintainable systems.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A journey through space and time exploring the universe and our place in it.",
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388620656i/55030.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "description": "A psychological thriller about a woman who shoots her husband and then never speaks again.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://m.media-amazon.com/images/I/81JJPDNlxSL.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "description": "A fast-paced, comprehensive introduction to programming with Python.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "image_url": "https://i.ibb.co/Pvp2Dgrf/5a97f209cfda5eca67e4982a1ea01307-jpg-720x720q80.jpg"
+  },
+   {
+    "id": 12,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "A science fiction epic set on the desert planet Arrakis.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
+  }
+]
