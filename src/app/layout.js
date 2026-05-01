@@ -8,7 +8,7 @@ const OutfitFont = Outfit({
 });
 
 export const metadata = {
-  title: "Book Borrowing Platform ",
+  title: " Home || Book Borrowing Platform ",
   description: "A modern online book borrowing platform where users can explore a wide collection of books, filter by categories, and borrow books digitally.",
 };
 

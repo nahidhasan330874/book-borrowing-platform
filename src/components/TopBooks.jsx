@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TopBooks = async () => {
   const res = await fetch(
-    "https://book-borrowing-platform-k266.vercel.app/data.json",
+    "https://book-borrowing-platform-k266.vercel.app/data.json"
   );
   const books = await res.json();
 

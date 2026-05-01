@@ -60,7 +60,7 @@ export default function App() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/allBook">
+            <Link href="/all_books">
               All Books
             </Link>
           </li>
