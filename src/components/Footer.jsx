@@ -1,23 +1,21 @@
- import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-2 bg-white">
+    <footer className="relative mt-2 bg-white max-w-7xl">
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
-      
       <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
 
-      
       <div
         className="absolute inset-0 -z-10 bg-linear-to-tr 
         from-purple-500/5 via-transparent to-blue-500/5 
         dark:from-purple-500/10 dark:to-blue-500/10 blur-3xl"
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-10">
             <Link href="/">
@@ -119,25 +117,31 @@ const Footer = () => {
           </div>
 
           <div>
-             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-             Connect
+            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
+              Connect
             </h3>
 
             <div className="flex space-x-4 text-xl">
-              <Link href="https://www.facebook.com/?ref=homescreenpwa" target="_blank"
-               className="text-black dark:hover:text-white transition"
+              <Link
+                href="https://www.facebook.com/?ref=homescreenpwa"
+                target="_blank"
+                className="text-black dark:hover:text-white transition"
               >
                 <FaFacebook />
               </Link>
 
-              <Link href="https://github.com/nahidhasan330874" target="_blank"
-                   className="text-black dark:hover:text-white transition"
+              <Link
+                href="https://github.com/nahidhasan330874"
+                target="_blank"
+                className="text-black dark:hover:text-white transition"
               >
                 <FaGithub />
               </Link>
 
-              <Link href="https://www.linkedin.com/in/nahid-hasan-a84589394/" target="_blank"
-                   className="text-black dark:hover:text-white transition"
+              <Link
+                href="https://www.linkedin.com/in/nahid-hasan-a84589394/"
+                target="_blank"
+                className="text-black dark:hover:text-white transition"
               >
                 <FaLinkedin />
               </Link>
@@ -153,13 +157,13 @@ const Footer = () => {
 
           <div className="flex items-center gap-6">
             <Link
-              href="/privacy"
+              href="/#"
               className="hover:text-black dark:hover:text-white transition"
             >
               Privacy
             </Link>
             <Link
-              href="/terms"
+              href="/#"
               className="hover:text-black dark:hover:text-white transition"
             >
               Terms

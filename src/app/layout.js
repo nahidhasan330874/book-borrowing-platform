@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     >
       <body>
         <Navbar/>
-        <main className="max-w-7xl container mx-auto">{children}</main>
+        <main className=" container mx-auto">{children}</main>
         <Footer/>
         </body>
     </html>

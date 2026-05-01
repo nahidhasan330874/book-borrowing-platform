@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <section className=" rounded-2xl  mt-8 shadow-sm">
+    <section className=" rounded-2xl max-w-7xl mt-8 shadow-sm">
       <div className=" pt-8 text-teal-500 mt-4 rounded-2xl">
         <marquee>
           New Arrivals: Atomic Habits | Rich Dad Poor Dad | Special Discount on
