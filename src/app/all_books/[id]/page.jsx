@@ -11,16 +11,6 @@ const bookDetails = async ({ params }) => {
   const books = await res.json();
   const book = books.find((b) => b.id == id);
 
-  const handleBorrow = () => {
-    if (!book) {
-      Toast.error("Please login first!");
-      router.push("/login");
-      return;
-    }
-
-    // success case
-    toast.success("Book borrowed successfully!");
-  };
   return (
     <div>
       <Card className="my-10 p-6 shadow  border border-gray-300">

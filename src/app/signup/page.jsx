@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import { IconBase } from "react-icons";
 import { GrGoogle } from "react-icons/gr";
+ 
 
 export default function SignUpPage() {
   const router = useRouter();

@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ #  Online Book Borrowing Platform
 
-## Getting Started
+A modern web application built with **Next.js** that allows users to browse, search, and borrow books easily. The platform includes authentication, private routes, category filtering, and a clean responsive UI.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🧭 Layout Structure
+- **Navbar**
+  - Left: Logo (links to Home)
+  - Center: Navigation (Home, All Books, My Profile)
+  - Right: Conditional Auth UI
+    - Logged out → Login button
+    - Logged in → User name + Logout button
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Footer**
+  - Social media links
+  - Contact Us section
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+###  Home Page
+- Hero Banner with **"Find Your Next Read"**
+- "Browse Now" button → redirects to All Books
+- Marquee section:
+  - “New Arrivals | Special Discounts | Trending Books”
+- Featured Books (Top 4 from JSON/API)
+- Extra Sections (custom-designed by developer)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+###  Authentication
+#### Login
+- Email & Password login form
+- Google Social Login
+- Redirect to Home after success
+- Error handling with toast/messages
+- Link to Register page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Register
+- Fields: Name, Email, Photo URL, Password
+- Redirect to Login after successful registration
+- Google Social Login support
+- Link to Login page
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+###  All Books Page
+- Search bar (search by book title)
+- Book cards display:
+  - Image
+  - Title
+  - "Details" button → Book Details page
+- Category Sidebar Filter:
+  - Story
+  - Tech
+  - Science
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+###  Book Details Page (Private Route)
+- Only accessible for logged-in users
+- Layout:
+  - Left: Book cover image
+  - Right: Details (Title, Author, Description, Available Quantity)
+- Action:
+  - "Borrow This Book" button
+    - If logged out → redirect to Login
+    - Shows confirmation toast
+
+---
+
+###  My Profile (Private Route)
+- Displays user information
+- Update profile feature:
+  - Update Name & Image
+  - Redirect to update form page
+
+---
+
+##   Challenges Implemented
+-  Profile Update system using BetterAuth
+-  Category sidebar filtering system
+-  Animation/Swiper/React Spring integration (at least one npm package used)
+
+---
+
+##  Tech Stack
+- **Next.js**
+- **Tailwind CSS**
+- **HeroUI**
+- **BetterAuth**
+- JSON Data / API Integration
+
+---
+
+##  JSON Data Structure
+
+```json
+{
+  "id": 1,
+  "title": "Book Title",
+  "author": "Author Name",
+  "description": "Book description...",
+  "category": "Story | Tech | Science",
+  "available_quantity": 5,
+  "image_url": "https://example.com/image.jpg"
+}
