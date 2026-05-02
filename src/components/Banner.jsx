@@ -26,7 +26,7 @@ export default function Banner() {
 
           <div className="flex gap-4">
             <Link
-              href="/books"
+              href="/all_books"
               className="border border-gray-200 hover:bg-teal-500 px-4 py-1 rounded-full  hover:text-white font-medium shadow"
             >
               Browse Now
