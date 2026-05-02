@@ -1,3 +1,4 @@
+import Category from "@/components/Category";
 import { Chip } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,19 +10,23 @@ export const metadata = {
     "Find your next read from our diverse collection of books. Filter by category, explore new arrivals, and borrow instantly—all in a smooth and user-friendly experience. ",
 };
 
-const allBooks = async () => {
+const allBooks = async ({ searchParams }) => {
+  const { category } =await searchParams;
+   
   const res = await fetch(
-    "https://book-borrowing-platform-k266.vercel.app/data.json",
+    "https://book-borrowing-platform-k266.vercel.app/data.json"
   );
   const books = await res.json();
+
+  const filteredBooks = category ? books.filter(book => book.category.toLowerCase() == category.toLowerCase()) :books
+
   return (
     <div>
       <div className="mt-10 mb-16 max-w-7xl mx-auto px-6">
-        <h2 className="font-bold text-3xl mb-10">All Featured Books</h2>
-        
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {books.map((book) => (
+        <h2 className="font-bold text-3xl mb-4">All Featured Books</h2>
+         <Category/> 
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-5 gap-6">
+          {filteredBooks.map((book) => (
             <div
               key={book.id}
               className="bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition"
