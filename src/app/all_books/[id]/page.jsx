@@ -1,5 +1,5 @@
  
-import { Button, Card, Chip, toast } from "@heroui/react";
+import { Button, Card, Chip, Toast, toast } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const bookDetails = async ({ params }) => {
 
   const handleBorrow = () => {
     if (!book) {
-      toast.error("Please login first!");
+      Toast.error("Please login first!");
       router.push("/login");
       return;
     }

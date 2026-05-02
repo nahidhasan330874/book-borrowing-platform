@@ -11,19 +11,52 @@ export const metadata = {
 };
 
 const allBooks = async ({ searchParams }) => {
-  const { category } =await searchParams;
-   
+  const { category, search } = await searchParams;
+
   const res = await fetch(
     "https://book-borrowing-platform-k266.vercel.app/data.json"
   );
   const books = await res.json();
 
-  const filteredBooks = category ? books.filter(book => book.category.toLowerCase() == category.toLowerCase()) :books
+let filteredBooks = books;
+if (category) {
+  filteredBooks = filteredBooks.filter(
+    (book) =>
+      book.category.toLowerCase() == category.toLowerCase()
+  );
+}
+ 
+if (search) {
+  filteredBooks = filteredBooks.filter((book) =>
+    book.title.toLowerCase().includes(search.toLowerCase())
+  );
+}
+ 
 
   return (
     <div>
       <div className="mt-10 mb-16 max-w-7xl mx-auto px-6">
-        <h2 className="font-bold text-3xl mb-4">All Featured Books</h2>
+           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
+          
+          <h2 className="font-bold text-3xl">All Featured Books</h2>
+
+          {/* Search Bar */}
+          <form className="flex items-center gap-2">
+            <input
+              type="text"
+              name="search"
+              defaultValue={search}
+              placeholder="Search..."
+              className="border px-4 py-1 rounded-full w-64 outline-none focus:ring-2 focus:ring-teal-400"
+            />
+            <button
+              type="submit"
+              className="bg-teal-500 text-white px-4 py-1 rounded-full hover:bg-teal-700"
+            >
+              Search
+            </button>
+          </form>
+        </div>
          <Category/> 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-5 gap-6">
           {filteredBooks.map((book) => (
@@ -53,7 +86,7 @@ const allBooks = async ({ searchParams }) => {
               </h3>
 
               <p className="text-sm text-gray-500 text-center">
-                {book.author || "Unknown Author"}
+                {book.author}
               </p>
 
               <Link
