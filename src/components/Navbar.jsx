@@ -71,7 +71,7 @@ export default function App() {
         <div className="hidden items-center gap-4 md:flex">
           <Link href="/login">Login</Link>
           <Link href="/signup">
-             Sign Up
+            Sing Up
           </Link>
         </div>
       </header>
@@ -91,10 +91,13 @@ export default function App() {
             </li>
 
             <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
-              <Link href="#" className="block py-2">
+              <Link href="/login" className="block py-2">
                 Login
               </Link>
-              <Button className="w-full">Sign Up</Button>
+              <Link href="/signup" className="block py-2">
+                Sign Up
+              </Link>
+              
             </li>
           </ul>
         </div>

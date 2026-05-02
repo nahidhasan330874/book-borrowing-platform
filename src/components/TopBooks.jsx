@@ -42,7 +42,7 @@ const TopBooks = async () => {
             </p>
 
             <Link
-              href={`/books/${book.id}`}
+               href={`all_books/${book.id}`}
               className="block mt-4 text-center bg-teal-500 text-white py-1 rounded-full hover:bg-teal-700"
             >
               View Details
