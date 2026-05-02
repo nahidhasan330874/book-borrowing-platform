@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import { IconBase } from "react-icons";
 import { GrGoogle } from "react-icons/gr";
  
@@ -32,6 +33,12 @@ export default function SignUpPage() {
       email,
       password,
     });
+
+     if (error) {
+    toast.error(error.message || "Registration failed");
+    return;
+  }
+  toast.success("Account created successfully!")
 
     if (!error) {
       router.push("/");

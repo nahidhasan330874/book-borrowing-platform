@@ -6,7 +6,7 @@ A modern web application built with **Next.js** that allows users to browse, sea
 
 ##  Features
 
-### 🧭 Layout Structure
+###  Layout Structure
 - **Navbar**
   - Left: Logo (links to Home)
   - Center: Navigation (Home, All Books, My Profile)
