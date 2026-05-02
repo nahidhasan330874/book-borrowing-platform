@@ -87,7 +87,7 @@ export default function Navbar() {
           {user && (
             <div className="flex gap-4">
               <div className="flex gap-2 items-center">
-                <p className="">{user.name}</p>
+                <p className="">{user?.name}</p>
                 <Avatar size="sm">
                   <Avatar.Image
                     alt="John Doe"
