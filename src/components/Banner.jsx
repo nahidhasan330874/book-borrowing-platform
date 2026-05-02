@@ -7,7 +7,7 @@ export default function Banner() {
     <section className=" rounded-2xl max-w-7xl mt-8 shadow-sm">
       <div className=" pt-8 text-teal-500 mt-4 rounded-2xl">
         <marquee>
-          New Arrivals: Atomic Habits | Rich Dad Poor Dad | Special Discount on
+          New Arrivals: Atomic Habits | A Brief History of Time | The Silent Patient | 20% Special Discount on
           Memberships...
         </marquee>
       </div>

@@ -69,10 +69,10 @@ export default function App() {
           </li>
         </ul>
         <div className="hidden items-center gap-4 md:flex">
-          <Link href="/login">Login</Link>
           <Link href="/signup">
             Sing Up
           </Link>
+          <Link href="/login">Login</Link>
         </div>
       </header>
       {isMenuOpen && (
@@ -91,11 +91,11 @@ export default function App() {
             </li>
 
             <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
-              <Link href="/login" className="block py-2">
-                Login
-              </Link>
               <Link href="/signup" className="block py-2">
                 Sign Up
+              </Link>
+              <Link href="/login" className="block py-2">
+                Login
               </Link>
               
             </li>

@@ -1,4 +1,5 @@
-import { Button, Card, Chip } from "@heroui/react";
+ 
+import { Button, Card, Chip, toast } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,9 +10,20 @@ const bookDetails = async ({ params }) => {
   );
   const books = await res.json();
   const book = books.find((b) => b.id == id);
+
+  const handleBorrow = () => {
+    if (!book) {
+      toast.error("Please login first!");
+      router.push("/login");
+      return;
+    }
+
+    // success case
+    toast.success("Book borrowed successfully!");
+  };
   return (
     <div>
-      <Card className="my-10 p-6 shadow">
+      <Card className="my-10 p-6 shadow  border border-gray-300">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex justify-center">
             <Image
@@ -21,19 +33,25 @@ const bookDetails = async ({ params }) => {
               height={400}
               className="rounded-xl object-cover"
             />
-            <Chip color="accent" className="absolute right-2 top-2">
-              {book.category}
-            </Chip>
           </div>
 
           <div className="flex flex-col justify-center space-y-4">
-            <h1 className="text-3xl font-bold">{book.title}</h1>
+            <h1 className="text-3xl font-bold">
+              {book.title}
+              <Chip color="accent" className="absolute ml-5">
+                {book.category}
+              </Chip>
+            </h1>
             <p className="text-lg text-gray-600">by {book.author}</p>
 
             <p className="text-gray-700">{book.description}</p>
 
-            <p className="font-semibold text-green-600">
-              {book.available_quantity} copies
+            <p>
+              <span className="font-medium text-gray-700">Available:</span> 
+              <span className="font-semibold text-green-600">
+       
+                {book.available_quantity} copies
+              </span>
             </p>
 
             <Link
