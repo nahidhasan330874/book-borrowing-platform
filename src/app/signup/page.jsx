@@ -13,6 +13,8 @@ import {
 } from "@heroui/react";
 
 export default function SignUpPage() {
+
+    
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -20,8 +22,12 @@ export default function SignUpPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    console.log({name, image, email, password})
- 
+    
+
+    const { data, error } = await authClient.signUp.email({
+    name, image, email, password
+});
+  console.log({data, error})
   };
 
   return (
