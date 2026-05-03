@@ -105,3 +105,4 @@ A modern web application built with **Next.js** that allows users to browse, sea
   "available_quantity": 5,
   "image_url": "https://example.com/image.jpg"
 }
+
