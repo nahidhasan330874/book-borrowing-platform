@@ -34,15 +34,15 @@ export default function SignUpPage() {
       password,
     });
 
-     if (data) {
+     if(!error) {
     toast.error(error.message || "Registration failed");
     return;
+  } else
+  {
+    toast.success("Account created successfully!")
+     router.push("/");
   }
-  toast.success("Account created successfully!")
 
-    if (!error) {
-      router.push("/");
-    }
   };
    const handleGoogleSignIn = async () => {
    await authClient.signIn.social({
