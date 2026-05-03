@@ -3,12 +3,12 @@
 import UpdateProfile from '@/components/UpdateProfile';
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from '@heroui/react';
+import toast from 'react-hot-toast';
  
 
 const  profilePage = () => {
    const userData = authClient.useSession();
   const user = userData.data?.user;
-
     return (
          <div className="max-w-xl mx-auto mt-10 p-6 border rounded-xl shadow">
       <div className="flex flex-col items-center gap-1">

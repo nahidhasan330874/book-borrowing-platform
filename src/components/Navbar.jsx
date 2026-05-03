@@ -24,6 +24,8 @@ const navLinkClass = (path) =>
     await authClient.signOut();
   };
 
+  
+
   return (
     <nav className="sticky top-0 z-40 w-full border-b backdrop-blur-lg  bg-white dark:bg-[#0a0a0b]">
       <header className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">

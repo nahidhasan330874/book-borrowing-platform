@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 import { GrGoogle } from "react-icons/gr";
 
  
@@ -26,13 +27,21 @@ export default function SignInPage() {
       password,
       callbackURL: "/",
     });
+    
+    if(error) {
+    toast.error("Login failed. Please try again");
+    return;
+  }
+     toast.success("Login successful!");
+     router.push("/");
   };
+
   const handleGoogleSignIn = async () => {
    await authClient.signIn.social({
       provider: "google",
     });
   };
-
+    
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">LogIn</h1>
