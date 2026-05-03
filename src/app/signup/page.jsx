@@ -34,14 +34,14 @@ export default function SignUpPage() {
       password,
     });
 
-     if(!error) {
-    toast.error(error.message || "Registration failed");
+     if(error) {
+    toast.error("Registration failed");
     return;
   } else
-  {
+  
     toast.success("Account created successfully!")
      router.push("/");
-  }
+  
 
   };
    const handleGoogleSignIn = async () => {
