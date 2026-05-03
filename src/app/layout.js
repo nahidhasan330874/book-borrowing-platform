@@ -5,6 +5,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from 'react-hot-toast';
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
     >
       <body>
         <Navbar/>
-        <main className=" max-w-7xl mx-auto">{children}</main>
+        <main className=" max-w-7xl mx-auto">{children} 
+           <Toaster position="top-right" />
+        </main>
         <Footer/>
         </body>
     </html>

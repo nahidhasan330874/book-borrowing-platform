@@ -37,7 +37,7 @@ export default function SignUpPage() {
      if(error) {
     toast.error("Registration failed");
     return;
-  } else
+  }
   
     toast.success("Account created successfully!")
      router.push("/");
