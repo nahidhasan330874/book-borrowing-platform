@@ -39,8 +39,7 @@ if (search) {
            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
           
           <h2 className="font-bold text-3xl">All Featured Books</h2>
-
-          {/* Search Bar */}
+          
           <form className="flex items-center gap-2">
             <input
               type="text"
