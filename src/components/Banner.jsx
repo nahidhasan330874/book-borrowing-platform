@@ -34,7 +34,7 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center animate__hinge ">
           <Image
             src="/banner.png"
             alt="Books Banner"
@@ -42,7 +42,7 @@ export default function Banner() {
             height={400}
             className="rounded-lg"
           />
-          
+        
         </div>
       </div>
     </section>

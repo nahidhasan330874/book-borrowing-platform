@@ -34,7 +34,7 @@ export default function SignUpPage() {
       password,
     });
 
-     if (error) {
+     if (data) {
     toast.error(error.message || "Registration failed");
     return;
   }
@@ -114,7 +114,7 @@ export default function SignUpPage() {
         <div className="flex gap-2 ">
           <Button type="submit">
             <Check />
-            Submit
+            Register
           </Button>
           <Button type="reset" variant="secondary">
             Reset
