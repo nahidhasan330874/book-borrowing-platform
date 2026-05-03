@@ -27,7 +27,7 @@ export default function SignInPage() {
       password,
       callbackURL: "/",
     });
-    
+
     if(error) {
     toast.error("Login failed. Please try again");
     return;
@@ -43,10 +43,10 @@ export default function SignInPage() {
   };
     
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border mx-auto w-125 py-10 mt-5 max-w-md sm:max-w-lg lg:max-w-xl sm:py-10">
       <h1 className="text-center text-2xl font-bold">LogIn</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-96 mx-auto max-w-sm sm:max-w-md flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"
