@@ -10,6 +10,12 @@ const OutfitFont = Outfit({
   subsets: ["latin"],
 });
 
+const navLinkClass = (path) =>
+  pathname === path
+    ? "text-blue-600 font-semibold"
+    : "text-gray-600 hover:text-blue-500";
+
+
 export const metadata = {
   title: " Book Borrowing Platform ",
   description: "A modern online book borrowing platform where users can explore a wide collection of books, filter by categories, and borrow books digitally.",

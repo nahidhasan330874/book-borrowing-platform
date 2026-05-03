@@ -3,8 +3,18 @@ import { useState } from "react";
 import { Link, Button, Avatar } from "@heroui/react";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
+import { usePathname } from "next/navigation";
+
 
 export default function Navbar() {
+
+  const pathname = usePathname();
+
+const navLinkClass = (path) =>
+  pathname === path
+    ? "text-teal-500 font-semibold"
+    : "text-gray-600 hover:text-teal-500";
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const userData = authClient.useSession();
@@ -63,23 +73,23 @@ export default function Navbar() {
         </div>
         <ul className="hidden items-center gap-4 md:flex">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/"  className={navLinkClass("/")}>Home</Link>
           </li>
           <li>
-            <Link href="/all_books">All Books</Link>
+            <Link href="/all_books"  className={navLinkClass("/all_books")}>All Books</Link>
           </li>
           <li>
-            <Link href="/profile">My Profile</Link>
+            <Link href="/profile"  className={navLinkClass("/profile")}>My Profile</Link>
           </li>
         </ul>
         <div className="hidden md:flex">
           {!user && (
             <ul className="items-center gap-4 flex ">
               <li>
-                <Link href="/signup">Sing Up</Link>
+                <Link href="/signup" className={navLinkClass("/signup")}>Sing Up</Link>
               </li>
               <li>
-                <Link href="/login">Login</Link>
+                <Link href="/login" className={navLinkClass("/login")}>Login</Link>
               </li>
             </ul>
           )}
