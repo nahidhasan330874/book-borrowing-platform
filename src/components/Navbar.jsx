@@ -123,7 +123,7 @@ const navLinkClass = (path) =>
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/books" className="font-medium" aria-current="page">
+              <Link href="/all_books" className="font-medium" aria-current="page">
                 All Books
               </Link>
             </li>
